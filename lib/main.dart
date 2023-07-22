@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:meals/screens/meal_detail_screen.dart';
 import 'package:meals/utils/app_routes.dart';
@@ -14,23 +15,41 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Vamos Cozinhar?',
-        theme: ThemeData(
-          primarySwatch: Colors.pink,
-          hintColor: Colors.amber,
-          fontFamily: 'Raleway',
-          textTheme: ThemeData.light().textTheme.copyWith(
-                titleLarge: const TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'RobotoCondensed',
-                ),
+      title: 'Vamos Cozinhar?',
+      theme: ThemeData(
+        primarySwatch: Colors.pink,
+        hintColor: Colors.amber,
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              titleLarge: const TextStyle(
+                fontSize: 20,
+                fontFamily: 'RobotoCondensed',
               ),
-        ),
-        routes: {
-          AppRoutes.HOME: (context) => const CategoriesScreen(),
-          AppRoutes.CATEGORIES_MEALS: (context) =>
-              const CategoriesMealsScrenn(),
-          AppRoutes.MEAL_DETAIL: (context) => const MealDetailScreen(),
+            ),
+      ),
+      routes: {
+        AppRoutes.HOME: (context) => const CategoriesScreen(),
+        AppRoutes.CATEGORIES_MEALS: (context) => const CategoriesMealsScrenn(),
+        AppRoutes.MEAL_DETAIL: (context) => const MealDetailScreen(),
+      },
+      /*onGenerateRoute: (settings) {
+        if (settings.name == 'alguma-coisa') {
+          return null;
+        } else if (settings.name == '/outra-coisa') {
+          return null;
+        } else {
+          return MaterialPageRoute(
+            builder: (_) {
+              return CategoriesScreen();
+            },
+          );
+        }
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (_) {
+          return CategoriesScreen();
         });
+      },*/
+    );
   }
 }
