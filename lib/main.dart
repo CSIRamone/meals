@@ -1,9 +1,8 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:meals/screens/meal_detail_screen.dart';
-import 'package:meals/utils/app_routes.dart';
-import 'screens/category_screen.dart';
-import 'screens/category_meals_screen.dart';
+import '../screens/meal_detail_screen.dart';
+import '../utils/app_routes.dart';
+import '../screens/category_screen.dart';
+import '../screens/category_meals_screen.dart';
 
 void main() {
   runApp(const MyApp());
